@@ -1,0 +1,4 @@
+# the same ol' gitignore
+
+*.o
+*.sfc
