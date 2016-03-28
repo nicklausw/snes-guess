@@ -4,7 +4,7 @@ FIX = superfamicheck
 
 TITLE = basic
 
-EMU = bsnes
+EMU = higan
 
 SFILES = $(wildcard *.s)
 OFILES = $(subst .s,.o,$(SFILES))
