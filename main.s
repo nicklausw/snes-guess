@@ -6,7 +6,7 @@
 .segment "ROMINFO"
  .byte $30 ; lorom fastrom
  .byte $00 ; no battery ram
- .byte $07 ; 128K rom
+ .byte $08 ; 256K rom
 
 
 .segment "VECTORS"
