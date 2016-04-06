@@ -26,6 +26,11 @@
 ; Register initialisation values, per official Nintendo documentation
 
   sep #$20     ; A=8
+  lda #$30
+  sta $2130
+  stz $2131
+  stz $2132
+  stz $2133
   lda #$80
   sta $2100
   stz $2101
