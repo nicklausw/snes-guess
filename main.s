@@ -67,7 +67,7 @@
   ldx #font & $FFFF
   jsr ppu_copy
   
-  lda #$6000|NTXY(1,1)
+  lda #$6000|NTXY(0,1)
   sta PPUADDR
 
 
@@ -101,7 +101,33 @@ zero_fill_byte:
   .byte $00
 
 message:
-  .byte "hello, snes! i am nicklausw!", $ff
+        ;12345678901234567890123456789012
+  .byte "hello, snes! i am nicklausw!    "
+  .byte " you know, back in my day, we   "
+  .byte "  always played the snes.       "
+  .byte "                                "
+  .byte "as in 2007. i was a 2000's kid. "
+  .byte " a retro one regardless.        "
+  .byte "                                "
+  .byte "anyway, this is my first        "
+  .byte " program for this system ever!  "
+  .byte "  YEAH! and you know something? "
+  .byte "                                "
+  .byte "back when i first started on    "
+  .byte " this system, i was using, yep, "
+  .byte "  wla-dx. now i proudly use     "
+  .byte "   ca65 instead!                "
+  .byte "                                "
+  .byte "quick hello to tepples, koitsu, "
+  .byte " dougeff, espozo, bazz, ramsis, "
+  .byte "  kannagi, and whoever else     "
+  .byte "   helped in the creation of    "
+  .byte "    this rom. thank you all!    "
+  .byte "                                "
+  .byte "                     -nicklausw "
+  .byte "                                "
+  .byte "(and yes, the overdone          "
+  .byte "enthusiasm is on purpose).", $ff
 
 ; palette macro
 .define bgr(cb, g, r) ((cb<<10)|(g<<5)|r)
