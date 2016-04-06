@@ -69,10 +69,21 @@
   
   lda #$6000|NTXY(1,1)
   sta PPUADDR
-  lda #'5'
+
+
+    ldx #$00
+
+: seta8
+  lda message, x
+  cpa #$ff
+  beq done
+  seta16
+  and #$ff ; clear higher bit
   sta PPUDATA
+  inx
+  jmp :-  
   
-  
+done:
   seta8
   
   lda #%00000001  ; enable sprites and plane 0
@@ -88,6 +99,9 @@
 ; we'll need this at some point ;3
 zero_fill_byte:
   .byte $00
+
+message:
+  .byte "hello, snes! i am nicklausw!", $ff
 
 palette:
   bgr 0, 0, 0
