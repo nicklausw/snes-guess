@@ -5,3 +5,6 @@
 .p816
 .smart
 .localchar '?'
+
+; main.s
+.global reset

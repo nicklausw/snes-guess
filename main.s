@@ -1,18 +1,5 @@
 .include "global.i"
 
-.segment "HEADER"
- .byte "I DUNNO" ; rom name
-
-.segment "ROMINFO"
- .byte $30 ; lorom fastrom
- .byte $00 ; no battery ram
- .byte $08 ; 256K rom
-
-
-.segment "VECTORS"
- .word 0, 0, 0, 0, 0, 0, 0, 0
- .word 0, 0, 0, 0, 0, 0, reset, 0
-
 
 ; the code
 .segment "CODE"
